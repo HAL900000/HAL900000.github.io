@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c6dbff;
+  background: #c8ffd0;
 }
 .feed-link,
 .chat {
@@ -2959,7 +2959,7 @@ ul.breadcrumb li+li:last-child {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background: url("https://i.loli.net/2019/04/09/5cacac3d382d4.jpg");
+    background-image: url("/images/1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
