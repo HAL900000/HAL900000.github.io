@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HAL9000</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-04-10T12:12:14.435Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>HAL9000</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="http://yoursite.com/2019/04/03/hello-world/"/>
+    <id>http://yoursite.com/2019/04/03/hello-world/</id>
+    <published>2019-04-03T13:26:42.507Z</published>
+    <updated>2019-04-10T12:12:14.435Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Fuck-the-world"><a href="#Fuck-the-world" class="headerlink" title="Fuck the world !"></a>Fuck the world !</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Fuck-the-world&quot;&gt;&lt;a href=&quot;#Fuck-the-world&quot; class=&quot;headerlink&quot; title=&quot;Fuck the world !&quot;&gt;&lt;/a&gt;Fuck the world !&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+  </entry>
+  
+</feed>
