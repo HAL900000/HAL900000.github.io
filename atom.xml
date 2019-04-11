@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-11T11:24:55.153Z</updated>
+  <updated>2019-04-11T10:45:12.683Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,42 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>lol</title>
-    <link href="http://yoursite.com/2019/04/11/lol/"/>
-    <id>http://yoursite.com/2019/04/11/lol/</id>
-    <published>2019-04-11T11:24:55.000Z</published>
-    <updated>2019-04-11T11:24:55.153Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/04/11/WriteUp-2019.4.11/"/>
-    <id>http://yoursite.com/2019/04/11/WriteUp-2019.4.11/</id>
-    <published>2019-04-11T11:22:54.703Z</published>
-    <updated>2019-04-11T11:23:05.761Z</updated>
-    
-    <content type="html"><![CDATA[<p>title: hexo使用指南<br>date: 2019-04-11 17:25:04<br>tags: WriteUp</p><h1 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h1><p>bugku：<a href="https://ctf.bugku.com/" target="_blank" rel="noopener">https://ctf.bugku.com/</a></p><p>skctf：<a href="http://47.105.148.65:13426/" target="_blank" rel="noopener">http://47.105.148.65:13426/</a></p><h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="输入密码查看flag"><a href="#输入密码查看flag" class="headerlink" title="输入密码查看flag"></a>输入密码查看flag</h2><p>burp抓包爆破</p><h2 id="flag在index里"><a href="#flag在index里" class="headerlink" title="flag在index里"></a>flag在index里</h2><p>文件包含漏洞 ，php://filter协议</p><p>参考<a href="https://www.leavesongs.com/PENETRATION/php-filter-magic.html" target="_blank" rel="noopener">https://www.leavesongs.com/PENETRATION/php-filter-magic.html</a></p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>以记事本格式打开hosts文件，加上#123.206.87.240 flag.baidu.com，然后再访问flag.baidu.com即可正常打开得到flag（PS:下载过烂橘子平台游戏的应该都知道这个方法。。）</p><h2 id="变量1"><a href="#变量1" class="headerlink" title="变量1"></a>变量1</h2><p><img src="assets/1550582644717-cd43fd86-b53a-4b1c-9181-a40327d4b8bd-1554981321002.png" alt="1550582644717-cd43fd86-b53a-4b1c-9181-a40327d4b8bd"></p><p>地址栏后加上args=GLOBALS上传变量</p><h2 id="简单的SQL注入"><a href="#简单的SQL注入" class="headerlink" title="简单的SQL注入"></a>简单的SQL注入</h2><p>手工注入步骤：</p><p>①判断是否存在注入（如1’ and ‘1’ =’1正常 1’ and ‘1’ =’2 报错，则说明存在注入漏洞）</p><p>②判断注入类型</p><p>③利用order by猜字段数（原理：如order by 3就是按表中第三列排序，如果报错则说明木有第三列）</p><p>④利用union select确定字段顺序</p><p>⑤利用database（）、user（）、version（）等函数开始暴库</p><p>⑥暴表、暴字段、暴数据….（这里要牢记<strong>information_schema</strong>数据库中的<strong>tables、column</strong>表中的t<strong>able_name、column_name</strong>字段，里面存放着所有表、库的名字）</p><h2 id="听说备份是个好习惯"><a href="#听说备份是个好习惯" class="headerlink" title="听说备份是个好习惯"></a>听说备份是个好习惯</h2><p>提示说到“备份”，可能是备份文件泄露，于是用了一个php代码泄露检测的工具御剑<br>检测了一下发现了index.php.bak文件，打开来 </p><p><img src="https://i.loli.net/2019/03/15/5c8b57617819a.png" alt></p><p>需要md5绕过，前面加了一些简单的过滤</p><p>地址： <a href="http://123.206.87.240:8002/web16/?kkeyey1[]=0e123&amp;&amp;kkeyey2[]=0e234" target="_blank" rel="noopener">http://123.206.87.240:8002/web16/?kkeyey1[]=0e123&amp;&amp;kkeyey2[]=0e234</a></p><p>中间的key被替换为空，但前后的加起来还是key…..</p><h2 id="前女友"><a href="#前女友" class="headerlink" title="前女友"></a>前女友</h2><p>关键在于‘链接’，可得到提示，同上题还是md5绕过</p><h2 id="web-1"><a href="#web-1" class="headerlink" title="web_1"></a>web_1</h2><p>?id=0.9999999999999  原理是php强制类型转换将浮点数转换为整数</p><h2 id="爆破"><a href="#爆破" class="headerlink" title="爆破"></a>爆破</h2><p>使用burpsuite抓包，send to intruder板块，设置pass=skctf$12345$，再将payload设置为number从0到99999（注意：如果数字少于5位数也不会自动补零，需要自行补上）（后来发现可以在下面设置数字最小位数、最大位数…）</p><h2 id="parse"><a href="#parse" class="headerlink" title="parse"></a>parse</h2><p>变量覆盖</p><p>?flag=boom=givemeflag</p><h1 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h1><h2 id="Excel"><a href="#Excel" class="headerlink" title="Excel"></a>Excel</h2><p>尝试了各种方法破解excel密码，但打开后发现只有乱码….最终把xls格式改为txt格式打开，在乱码中查找“flag“得到flag</p><h2 id="morse"><a href="#morse" class="headerlink" title="morse"></a>morse</h2><p>音频隐写术，开始毫无头绪，在表哥提示下下载了audacity，得到一段波形谱，又根据题目提示可以知道该题与摩斯密码有关，于是以长波形作为- 短波形作为.解密得到flag</p><h2 id="easy-stego"><a href="#easy-stego" class="headerlink" title="easy_stego"></a>easy_stego</h2><p>右键属性-详细信息</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;title: hexo使用指南&lt;br&gt;date: 2019-04-11 17:25:04&lt;br&gt;tags: WriteUp&lt;/p&gt;
-&lt;h1 id=&quot;题目来源&quot;&gt;&lt;a href=&quot;#题目来源&quot; class=&quot;headerlink&quot; title=&quot;题目来源&quot;&gt;&lt;/a&gt;题目来源&lt;
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>hexo使用指南</title>
