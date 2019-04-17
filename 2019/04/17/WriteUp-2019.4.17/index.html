@@ -103,13 +103,13 @@
 <meta property="og:site_name" content="HAL9000">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/04/17/5cb72b02b4bd7.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/1555504462641.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/17/5cb72b904c1fa.png">
 <meta property="og:image" content="e:/Markdown/Typora/Typora/image/1555504207319.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/1555504503878.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/1555505105003.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/1555505348275.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/1555506872590.png">
-<meta property="og:updated_time" content="2019-04-17T13:33:39.205Z">
+<meta property="og:image" content="https://i.loli.net/2019/04/17/5cb72baebe5ef.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/17/5cb72bca47a28.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/17/5cb72be63ff35.png">
+<meta property="og:image" content="https://i.loli.net/2019/04/17/5cb72bfb45b9b.png">
+<meta property="og:updated_time" content="2019-04-17T13:37:18.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WriteUp-2019.4.17">
 <meta name="twitter:image" content="https://i.loli.net/2019/04/17/5cb72b02b4bd7.png">
@@ -374,7 +374,7 @@
                 
               
 
-              <time title="创建时间：2019-04-17 21:18:13 / 修改时间：21:33:39" itemprop="dateCreated datePublished" datetime="2019-04-17T21:18:13+08:00">2019-04-17</time>
+              <time title="创建时间：2019-04-17 21:18:13 / 修改时间：21:37:18" itemprop="dateCreated datePublished" datetime="2019-04-17T21:18:13+08:00">2019-04-17</time>
             
 
             
@@ -418,27 +418,27 @@
 <h2 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h2><p>MOCTF：<a href="http://www.moctf.com/" target="_blank" rel="noopener">http://www.moctf.com/</a></p>
 <h2 id="访问限制"><a href="#访问限制" class="headerlink" title="访问限制"></a>访问限制</h2><p>提示只允许使用NAIVE浏览器访问</p>
 <p>抓包修改为User-Agent：Naive</p>
-<h2 id="机器蛇"><a href="#机器蛇" class="headerlink" title="机器蛇"></a>机器蛇</h2><p><img src="E:\Markdown\Typora\Typora\image\1555504462641.png" alt="1555504462641">查看源码发现提示robots.txt，即爬虫协议</p>
+<h2 id="机器蛇"><a href="#机器蛇" class="headerlink" title="机器蛇"></a>机器蛇</h2><p><img src="https://i.loli.net/2019/04/17/5cb72b904c1fa.png" alt="1555504462641">查看源码发现提示robots.txt，即爬虫协议</p>
 <p>进入robots.txt后看到<img src="E:\Markdown\Typora\Typora\image\1555504207319.png" alt="1555504207319"></p>
 <p>再根据提示进入flag327a6c4304ad5938eaf0efb6cc3e53dc.php</p>
 <p>查看源码即可得到flag</p>
-<h2 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h2><p><img src="E:\Markdown\Typora\Typora\image\1555504503878.png" alt="1555504503878"></p>
+<h2 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h2><p><img src="https://i.loli.net/2019/04/17/5cb72baebe5ef.png" alt="1555504503878"></p>
 <p>注意到url地址中出现关键词?file=…</p>
 <p>这是一个典型的文件包含漏洞</p>
 <p><a href="http://119.23.73.3:5001/web8/index.php?file=php://filter/read=convert.base64-encode/resource=flag.php" target="_blank" rel="noopener">http://119.23.73.3:5001/web8/index.php?file=php://filter/read=convert.base64-encode/resource=flag.php</a> 然后将得到的代码base64解码得到flag</p>
 <p>其中php://是一种协议名称，php://filter/是一种访问本地文件的协议，/read=convert.base64-encode/表示读取的方式是base64编码后的代码，resource=flag.php表示目标文件为flag.php</p>
 <p>为什么读取base64编码后的代码呢？这是因为编码前是一串php代码，会自动执行，而flag信息隐含在注释之中</p>
-<h2 id="登陆就对了"><a href="#登陆就对了" class="headerlink" title="登陆就对了"></a>登陆就对了</h2><p><img src="E:\Markdown\Typora\Typora\image\1555505105003.png" alt="1555505105003"></p>
+<h2 id="登陆就对了"><a href="#登陆就对了" class="headerlink" title="登陆就对了"></a>登陆就对了</h2><p><img src="https://i.loli.net/2019/04/17/5cb72bca47a28.png" alt="1555505105003"></p>
 <p>尝试sql注入，在用户名一栏中输入 </p>
 <p>admin’ or 1=1 #</p>
 <p>登陆成功，F12中得到flag’</p>
-<h2 id="我想要钱"><a href="#我想要钱" class="headerlink" title="我想要钱"></a>我想要钱</h2><p><img src="E:\Markdown\Typora\Typora\image\1555505348275.png" alt="1555505348275"></p>
+<h2 id="我想要钱"><a href="#我想要钱" class="headerlink" title="我想要钱"></a>我想要钱</h2><p><img src="https://i.loli.net/2019/04/17/5cb72be63ff35.png" alt="1555505348275"></p>
 <p>需要参数money满足以下几个条件才能返回flag：</p>
 <p>1、money的长度&lt;4</p>
 <p>2、money&gt;time()，time()的值是指unix纪元开始至当前时刻的秒数</p>
 <p>3、money不是数组</p>
 <p>这里需要将money表示为科学计数法，如1e99，表示10的99次方</p>
-<h2 id="暴跳老板"><a href="#暴跳老板" class="headerlink" title="暴跳老板"></a>暴跳老板</h2><p><img src="E:\Markdown\Typora\Typora\image\1555506872590.png" alt="1555506872590"></p>
+<h2 id="暴跳老板"><a href="#暴跳老板" class="headerlink" title="暴跳老板"></a>暴跳老板</h2><p><img src="https://i.loli.net/2019/04/17/5cb72bfb45b9b.png" alt="1555506872590"></p>
 <p>抓包后添加内容</p>
 <p>postText=&amp;Dear=MyBoss</p>
 
