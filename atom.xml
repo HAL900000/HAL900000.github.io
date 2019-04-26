@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-17T13:37:18.215Z</updated>
+  <updated>2019-04-26T13:08:19.180Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>paper</title>
+    <link href="http://yoursite.com/2019/04/26/WriteUp-2019.4.26/"/>
+    <id>http://yoursite.com/2019/04/26/WriteUp-2019.4.26/</id>
+    <published>2019-04-26T11:33:33.000Z</published>
+    <updated>2019-04-26T13:08:19.180Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190426210754.png" alt></p><a id="more"></a><h2 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h2><p>MOCTF：<a href="http://www.moctf.com/" target="_blank" rel="noopener">http://www.moctf.com/</a></p><h2 id="flag在哪"><a href="#flag在哪" class="headerlink" title="flag在哪"></a>flag在哪</h2><p>遇事不决先抓包，发现了以下几个302跳转</p><p>../where_is_flag.php</p><p>../flag.php</p><p>../I_have_a_frog.php</p><p>../I_have_a_flag.php</p><p>../no_flag.php</p><p>根据某洗脑沙雕歌曲猜想地址可能是/frogflag</p><p>在Repeater模块中修改地址</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/timg.jpg" alt></p><h2 id="美味的饼干"><a href="#美味的饼干" class="headerlink" title="美味的饼干"></a>美味的饼干</h2><p>抓包，发送到Repeater模块</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190422204123.png" alt></p><p>提示login=ZWUxMWNiYjE5MDUyZTQwYjA3YWFjMGNhMDYwYzIzZWU%3D</p><p>疑似base64加密</p><p>解密后得到ee11cbb19052e40b07aac0ca060c23ee</p><p>疑似md5加密</p><p>解密后得到user</p><p>根据以上推测将admin两次加密后作为cookie发送</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190422204450.png" alt></p><h2 id="我可是黑客"><a href="#我可是黑客" class="headerlink" title="我可是黑客"></a>我可是黑客</h2><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190426192918.png" alt></p><p>将图片保存到本地，直接拖入winhex</p><h2 id="扫扫出奇迹"><a href="#扫扫出奇迹" class="headerlink" title="扫扫出奇迹"></a>扫扫出奇迹</h2><p>拖入Stegosolve，xor模式下可以看到反色，成功识别二维码</p><h2 id="光阴似箭"><a href="#光阴似箭" class="headerlink" title="光阴似箭"></a>光阴似箭</h2><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190426205951.png" alt></p><p>同上拖入Stegosolve，使用Frame Browser得到flag</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190426210754.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="WriteUp" scheme="http://yoursite.com/tags/WriteUp/"/>
+    
+  </entry>
   
   <entry>
     <title>WriteUp-2019.4.17</title>
