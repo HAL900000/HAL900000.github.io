@@ -102,19 +102,19 @@
 <meta property="og:url" content="http://yoursite.com/2019/05/19/WriteUp-2019.5.19/index.html">
 <meta property="og:site_name" content="HAL9000">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/2019-05-16%20153035-1558437694038.jpg">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/20190509194138-1558437824568.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/20190509194339-1558437839214.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/20190511104839-1558437725982.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/20190511105627-1558437804600.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/20190511104424-1558437793514.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/20190511104658-1558437771940.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/20190512210658-1558437760468.png">
-<meta property="og:image" content="e:/Markdown/Typora/Typora/image/20190512211231-1558437746186.png">
-<meta property="og:updated_time" content="2019-05-21T11:24:07.266Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/2019-05-16 153035.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190509194138.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190509194339.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190511104839.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190511105627.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190511104424.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190511104658.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190512210658.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190512211159.png">
+<meta property="og:updated_time" content="2019-05-22T12:14:04.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WriteUp-2019.5.19">
-<meta name="twitter:image" content="e:/Markdown/Typora/Typora/image/2019-05-16%20153035-1558437694038.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/2019-05-16 153035.jpg">
 
 
 
@@ -393,7 +393,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-21 19:24:07" itemprop="dateModified" datetime="2019-05-21T19:24:07+08:00">2019-05-21</time>
+                <time title="修改时间：2019-05-22 20:14:04" itemprop="dateModified" datetime="2019-05-22T20:14:04+08:00">2019-05-22</time>
               
             
           </span>
@@ -427,37 +427,37 @@
       
 
       
-        <p><img src="E:\Markdown\Typora\Typora\image\2019-05-16 153035-1558437694038.jpg" alt></p>
+        <p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/2019-05-16 153035.jpg" alt></p>
 <a id="more"></a>
 <h2 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h2><p>bugku：<a href="https://ctf.bugku.com/" target="_blank" rel="noopener">https://ctf.bugku.com/</a></p>
 <p>MISC专题</p>
 <h2 id="隐写3"><a href="#隐写3" class="headerlink" title="隐写3"></a>隐写3</h2><p>给出一个png图片，联想到png文件中的IHDR数据块可以修改图片的高和宽</p>
 <p>（PS:IHDR数据块被修改过的png图片只能从windows打开，不可以从linux系统打开，根据这可以判断IHDR是否被篡改过）</p>
-<p><img src="E:\Markdown\Typora\Typora\image\20190509194138-1558437824568.png" alt></p>
-<p><img src="E:\Markdown\Typora\Typora\image\20190509194339-1558437839214.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190509194138.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190509194339.png" alt></p>
 <p>如图，“00 00 02 A7”表示宽度，“00 00 01 00”表示高度</p>
 <p>将16进制转换为10进制，可知图片宽679像素，高256像素，需要将图片拉高</p>
 <p>将高度的部分修改为“00 00 02 A7”，保存临时文件</p>
 <p>再次打开图片</p>
-<p><img src="E:\Markdown\Typora\Typora\image\20190511104839-1558437725982.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190511104839.png" alt></p>
 <h2 id="细心的大象"><a href="#细心的大象" class="headerlink" title="细心的大象"></a>细心的大象</h2><p>给出一个jpg图片，遇事不决先拖入binwalk，</p>
-<p><img src="E:\Markdown\Typora\Typora\image\20190511105627-1558437804600.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190511105627.png" alt></p>
 <p>分离出一个压缩文件，但需要密码来解压</p>
 <p>在图片详细信息中找到密码</p>
 <p>解压后得到一个看起来有些残缺的png图片</p>
 <p>后面同上一题，使用winhex修改图片的高和宽</p>
 <h2 id="LINUX2"><a href="#LINUX2" class="headerlink" title="LINUX2"></a>LINUX2</h2><p>既然有提示LINUX，直接拖入binwalk</p>
-<p><img src="E:\Markdown\Typora\Typora\image\20190511104424-1558437793514.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190511104424.png" alt></p>
 <p>dd if=brave of=1.jpg skip=13712384 bs=1</p>
 <p>分离jpg文件，但却得到一个假flag。。</p>
 <p>尝试直接用grep命令在文件中搜索“KEY”关键词</p>
 <p>grep ‘KEY’ -a brave</p>
-<p><img src="E:\Markdown\Typora\Typora\image\20190511104658-1558437771940.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190511104658.png" alt></p>
 <p>Bingo！</p>
 <h2 id="猫片-安恒"><a href="#猫片-安恒" class="headerlink" title="猫片(安恒)"></a>猫片(安恒)</h2><p>png图片</p>
 <p>hint:LSB BGR NTFS</p>
 <p>根据提示用stegsolve打开图片</p>
-<p><img src="E:\Markdown\Typora\Typora\image\20190512210658-1558437760468.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190512210658.png" alt></p>
 <p>可以看出这个大概是让通过这个生成一个新的png文件了，但打开以后是损坏文件</p>
 <p>百度一下发现png图片文件头应是”89504e47”</p>
 <p>将生成得png文件拖入winhex，删除”fffe”</p>
@@ -466,7 +466,7 @@
 <p>但这个二维码是扫不出来的，需要用stegsolve进行反色处理</p>
 <p>扫码得到一个链接<strong><a href="https://pan.baidu.com/s/1pLT2J4f" target="_blank" rel="noopener">https://pan.baidu.com/s/1pLT2J4f</a></strong></p>
 <p>下载下来发现。。</p>
-<p><img src="E:\Markdown\Typora\Typora\image\20190512211231-1558437746186.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190512211159.png" alt></p>
 <p>？？？</p>
 <p>尼玛的，为什么？</p>
 <p>上网搜了大佬的wp后发现需要用到ntfstreamseditor，来查看文件的数据流</p>
