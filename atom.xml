@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-19T07:11:58.637Z</updated>
+  <updated>2019-08-19T07:13:14.945Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/08/19/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
     <id>http://yoursite.com/2019/08/19/渗透测试/</id>
     <published>2019-08-19T07:06:55.000Z</published>
-    <updated>2019-08-19T07:11:58.637Z</updated>
+    <updated>2019-08-19T07:13:14.945Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/QQ图片20190812212307.jpg" alt></p><a id="more"></a><h2 id="渗透测试"><a href="#渗透测试" class="headerlink" title="渗透测试"></a>渗透测试</h2><p>靶机下载地址：<a href="https://download.vulnhub.com/lazysysadmin/Lazysysadmin.zip" target="_blank" rel="noopener">https://download.vulnhub.com/lazysysadmin/Lazysysadmin.zip</a></p><p>设置kali和靶机连接方式都为NAT</p><p>首先确认靶机的IP地址</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190818190235.png" alt></p><p>发现地址为192.168.2.129，nmap扫描端口</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190818190319.png" alt></p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190818191836.png" alt></p><p>发现有ssh、smb服务</p><p>nikto扫描目录</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190818201535.png" alt></p><p>发现了/wordpress，进去发现</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190819130513.png" alt></p><p>猜测togie可能是一个用户名</p><p>然后枚举一下smb服务，发现三个目录</p><p>//192.168.2.129/print$    Mapping: DENIED, Listing: N/A<br>//192.168.2.129/share$    Mapping: OK, Listing: OK<br>//192.168.2.129/IPC$    [E] Can’t understand response:</p><p>尝试匿名连接</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190819130455.png" alt></p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190819130436.png" alt></p><p>发现password为12345</p><p>结合前面的用户名连接ssh</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190819130404.png" alt></p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190819130318.png" alt></p><p>提权成功 密码还是12345…</p><p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190819130258.png" alt></p>]]></content>
     
