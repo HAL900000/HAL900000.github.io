@@ -96,18 +96,16 @@
 
 
 
-  <meta name="keywords" content="WriteUp">
-<meta property="og:type" content="article">
-<meta property="og:title" content="WriteUp-2019.4.11">
-<meta property="og:url" content="http://yoursite.com/2019/04/11/WriteUp-2019.4.11/index.html">
+  <meta name="description" content="Answer to the Ultimate Question of Life, the Universe, and Everything  42。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HAL9000">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="HAL9000">
+<meta property="og:description" content="Answer to the Ultimate Question of Life, the Universe, and Everything  42。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/5378263-d7e10927a4627e44.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/03/15/5c8b57617819a.png">
-<meta property="og:updated_time" content="2019-05-22T12:32:26.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WriteUp-2019.4.11">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/5378263-d7e10927a4627e44.jpg">
+<meta name="twitter:title" content="HAL9000">
+<meta name="twitter:description" content="Answer to the Ultimate Question of Life, the Universe, and Everything  42。">
 
 
 
@@ -115,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/11/WriteUp-2019.4.11/">
+  <link rel="canonical" href="http://yoursite.com/page/3/">
 
 
 
@@ -125,7 +123,7 @@
   };
 </script>
 
-  <title>WriteUp-2019.4.11 | HAL9000</title>
+  <title>HAL9000</title>
   
 
 
@@ -173,7 +171,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -307,9 +306,9 @@
           
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -324,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/11/WriteUp-2019.4.11/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/11/hexo使用指南/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HAL9000">
@@ -341,8 +340,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">WriteUp-2019.4.11
-
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/11/hexo使用指南/" class="post-title-link" itemprop="url">hexo使用指南</a>
               
             
           </h1>
@@ -367,7 +368,7 @@
                 
               
 
-              <time title="创建时间：2019-04-11 19:24:55" itemprop="dateCreated datePublished" datetime="2019-04-11T19:24:55+08:00">2019-04-11</time>
+              <time title="创建时间：2019-04-11 15:25:04" itemprop="dateCreated datePublished" datetime="2019-04-11T15:25:04+08:00">2019-04-11</time>
             
 
             
@@ -384,7 +385,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-22 20:32:26" itemprop="dateModified" datetime="2019-05-22T20:32:26+08:00">2019-05-22</time>
+                <time title="修改时间：2019-05-22 20:32:28" itemprop="dateModified" datetime="2019-05-22T20:32:28+08:00">2019-05-22</time>
               
             
           </span>
@@ -418,36 +419,18 @@
       
 
       
-        <p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/5378263-d7e10927a4627e44.jpg" alt></p>
-<a id="more"></a>
-<h1 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h1><p>bugku：<a href="https://ctf.bugku.com/" target="_blank" rel="noopener">https://ctf.bugku.com/</a></p>
-<p>skctf：<a href="http://47.105.148.65:13426/" target="_blank" rel="noopener">http://47.105.148.65:13426/</a></p>
-<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="输入密码查看flag"><a href="#输入密码查看flag" class="headerlink" title="输入密码查看flag"></a>输入密码查看flag</h2><p>burp抓包爆破</p>
-<h2 id="flag在index里"><a href="#flag在index里" class="headerlink" title="flag在index里"></a>flag在index里</h2><p>文件包含漏洞 ，php://filter协议</p>
-<p>参考<a href="https://www.leavesongs.com/PENETRATION/php-filter-magic.html" target="_blank" rel="noopener">https://www.leavesongs.com/PENETRATION/php-filter-magic.html</a></p>
-<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>以记事本格式打开hosts文件，加上#123.206.87.240 flag.baidu.com，然后再访问flag.baidu.com即可正常打开得到flag（PS:下载过烂橘子平台游戏的应该都知道这个方法。。）</p>
-<h2 id="变量1"><a href="#变量1" class="headerlink" title="变量1"></a>变量1</h2><p>地址栏后加上args=GLOBALS上传变量</p>
-<h2 id="简单的SQL注入"><a href="#简单的SQL注入" class="headerlink" title="简单的SQL注入"></a>简单的SQL注入</h2><p>手工注入步骤：</p>
-<p>①判断是否存在注入（如1’ and ‘1’ =’1正常 1’ and ‘1’ =’2 报错，则说明存在注入漏洞）</p>
-<p>②判断注入类型</p>
-<p>③利用order by猜字段数（原理：如order by 3就是按表中第三列排序，如果报错则说明木有第三列）</p>
-<p>④利用union select确定字段顺序</p>
-<p>⑤利用database（）、user（）、version（）等函数开始暴库</p>
-<p>⑥暴表、暴字段、暴数据….（这里要牢记<strong>information_schema</strong>数据库中的<strong>tables、column</strong>表中的t<strong>able_name、column_name</strong>字段，里面存放着所有表、库的名字）</p>
-<h2 id="听说备份是个好习惯"><a href="#听说备份是个好习惯" class="headerlink" title="听说备份是个好习惯"></a>听说备份是个好习惯</h2><p>提示说到“备份”，可能是备份文件泄露，于是用了一个php代码泄露检测的工具御剑<br>检测了一下发现了index.php.bak文件，打开来 </p>
-<p><img src="https://i.loli.net/2019/03/15/5c8b57617819a.png" alt></p>
-<p>需要md5绕过，前面加了一些简单的过滤</p>
-<p>地址： <a href="http://123.206.87.240:8002/web16/?kkeyey1[]=0e123&amp;&amp;kkeyey2[]=0e234" target="_blank" rel="noopener">http://123.206.87.240:8002/web16/?kkeyey1[]=0e123&amp;&amp;kkeyey2[]=0e234</a></p>
-<p>中间的key被替换为空，但前后的加起来还是key…..</p>
-<h2 id="前女友"><a href="#前女友" class="headerlink" title="前女友"></a>前女友</h2><p>关键在于‘链接’，可得到提示，同上题还是md5绕过</p>
-<h2 id="web-1"><a href="#web-1" class="headerlink" title="web_1"></a>web_1</h2><p>?id=0.9999999999999  原理是php强制类型转换将浮点数转换为整数</p>
-<h2 id="爆破"><a href="#爆破" class="headerlink" title="爆破"></a>爆破</h2><p>使用burpsuite抓包，send to intruder板块，设置pass=skctf$12345$，再将payload设置为number从0到99999（注意：如果数字少于5位数也不会自动补零，需要自行补上）（后来发现可以在下面设置数字最小位数、最大位数…）</p>
-<h2 id="parse"><a href="#parse" class="headerlink" title="parse"></a>parse</h2><p>变量覆盖</p>
-<p>?flag=boom=givemeflag</p>
-<h1 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h1><h2 id="Excel"><a href="#Excel" class="headerlink" title="Excel"></a>Excel</h2><p>尝试了各种方法破解excel密码，但打开后发现只有乱码….最终把xls格式改为txt格式打开，在乱码中查找“flag“得到flag</p>
-<h2 id="morse"><a href="#morse" class="headerlink" title="morse"></a>morse</h2><p>音频隐写术，开始毫无头绪，在表哥提示下下载了audacity，得到一段波形谱，又根据题目提示可以知道该题与摩斯密码有关，于是以长波形作为- 短波形作为.解密得到flag</p>
-<h2 id="easy-stego"><a href="#easy-stego" class="headerlink" title="easy_stego"></a>easy_stego</h2><p>右键属性-详细信息</p>
-
+        
+          <p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/5378263-1739919cf429a2d4.jpg" alt></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/11/hexo使用指南/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
 
@@ -468,40 +451,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/WriteUp/" rel="tag"># WriteUp</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/04/11/hexo使用指南/" rel="next" title="hexo使用指南">
-                <i class="fa fa-chevron-left"></i> hexo使用指南
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/17/WriteUp-2019.4.17/" rel="prev" title="WriteUp-2019.4.17">
-                WriteUp-2019.4.17 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -511,15 +468,179 @@
   </article>
 
 
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HAL9000">
+      <meta itemprop="description" content="Answer to the Ultimate Question of Life, the Universe, and Everything <br/> 42。">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HAL9000">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/10/hello-world/" class="post-title-link" itemprop="url">Hello World!</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-10 10:57:50" itemprop="dateCreated datePublished" datetime="2019-04-10T10:57:50+08:00">2019-04-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-21 22:59:58" itemprop="dateModified" datetime="2019-04-21T22:59:58+08:00">2019-04-21</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://i.loli.net/2019/04/11/5caf35e27cbb0.png" alt="a2.png"></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/10/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 
 
           </div>
           
-
-  
-
-
 
         </div>
         
@@ -539,17 +660,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -658,23 +770,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目来源"><span class="nav-number">1.</span> <span class="nav-text">题目来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WEB"><span class="nav-number">2.</span> <span class="nav-text">WEB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#输入密码查看flag"><span class="nav-number">2.1.</span> <span class="nav-text">输入密码查看flag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flag在index里"><span class="nav-number">2.2.</span> <span class="nav-text">flag在index里</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名解析"><span class="nav-number">2.3.</span> <span class="nav-text">域名解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量1"><span class="nav-number">2.4.</span> <span class="nav-text">变量1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单的SQL注入"><span class="nav-number">2.5.</span> <span class="nav-text">简单的SQL注入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#听说备份是个好习惯"><span class="nav-number">2.6.</span> <span class="nav-text">听说备份是个好习惯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前女友"><span class="nav-number">2.7.</span> <span class="nav-text">前女友</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web-1"><span class="nav-number">2.8.</span> <span class="nav-text">web_1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爆破"><span class="nav-number">2.9.</span> <span class="nav-text">爆破</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#parse"><span class="nav-number">2.10.</span> <span class="nav-text">parse</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MISC"><span class="nav-number">3.</span> <span class="nav-text">MISC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Excel"><span class="nav-number">3.1.</span> <span class="nav-text">Excel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#morse"><span class="nav-number">3.2.</span> <span class="nav-text">morse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#easy-stego"><span class="nav-number">3.3.</span> <span class="nav-text">easy_stego</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
@@ -802,10 +897,6 @@
 
 
   
-  <script src="/js/scrollspy.js?v=7.1.0"></script>
-<script src="/js/post-details.js?v=7.1.0"></script>
-
-
 
   
 
@@ -821,8 +912,6 @@
 
   
 
-
-  
 
 
   
