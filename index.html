@@ -368,12 +368,24 @@
                 
               
 
-              <time title="创建时间：2019-10-11 19:47:39 / 修改时间：20:13:34" itemprop="dateCreated datePublished" datetime="2019-10-11T19:47:39+08:00">2019-10-11</time>
+              <time title="创建时间：2019-10-11 19:47:39" itemprop="dateCreated datePublished" datetime="2019-10-11T19:47:39+08:00">2019-10-11</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-19 19:07:10" itemprop="dateModified" datetime="2019-10-19T19:07:10+08:00">2019-10-19</time>
               
             
           </span>
@@ -408,16 +420,78 @@
 
       
         
-          <p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/YTXGSTS437E026TWC.jpg" alt></p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/10/11/docker学习笔记/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
+            <a id="more"></a>
+<p>参考:<a href="https://github.com/yeasy/docker_practice/blob/master/SUMMARY.md" target="_blank" rel="noopener">https://github.com/yeasy/docker_practice/blob/master/SUMMARY.md</a></p>
+<p><a href="http://n4tsu.top/2019/06/04/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" target="_blank" rel="noopener">http://n4tsu.top/2019/06/04/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more</a></p>
+<h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>1、更新apt</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+<p>2、安装docker</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install docker-ce</span><br></pre></td></tr></table></figure>
+<p>3、查看docker是否安装成功</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker -v</span></span><br></pre></td></tr></table></figure>
+<p>若显示“Docker version xx.xx.x-ce, build afdb6d4” 安装成功</p>
+<p>4、更新docker源为国内源</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi <span class="regexp">/etc/</span>docker<span class="regexp">/daemon.json</span></span><br></pre></td></tr></table></figure>
+<p>加上以下代码</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">"registry-mirrors"</span>: [</span><br><span class="line"><span class="string">"https://registry.docker-cn.com"</span></span><br><span class="line">]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Docker的使用"><a href="#Docker的使用" class="headerlink" title="Docker的使用"></a>Docker的使用</h2><p>开启docker服务</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> service </span>docker start</span><br></pre></td></tr></table></figure>
+<p>停止重启服务</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> service </span>docker stop</span><br><span class="line">sudo<span class="built_in"> service </span>docker restart</span><br></pre></td></tr></table></figure>
+<p>拉取镜像</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull <span class="string">[image]</span></span><br></pre></td></tr></table></figure>
+<p>查看当前镜像。</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker images</span></span><br></pre></td></tr></table></figure>
+<p>新建一个docker容器，并映射端口号</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p <span class="string">[host port]</span>:<span class="string">[docker port]</span> <span class="string">[image]</span></span><br></pre></td></tr></table></figure>
+<p>查看运行中的docker容器</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker ps</span></span><br></pre></td></tr></table></figure>
+<p>进入一个docker容器。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -<span class="keyword">it</span> [container <span class="built_in">id</span>] bash</span><br></pre></td></tr></table></figure>
+<p>拷贝本地文件到docker。</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp <span class="string">[本地路径]</span> <span class="string">[container id]</span>:<span class="string">[container 路径]</span></span><br></pre></td></tr></table></figure>
+<p>启动/停止docker容器</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">stop</span> [<span class="keyword">container</span> <span class="keyword">id</span>]</span><br><span class="line">docker <span class="keyword">start</span> [<span class="keyword">container</span> <span class="keyword">id</span>]</span><br></pre></td></tr></table></figure>
+<p>删除docker容器</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm <span class="string">[container id]</span></span><br></pre></td></tr></table></figure>
+<p>删除docker镜像</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi <span class="string">[image id]</span></span><br></pre></td></tr></table></figure>
+<h2 id="CTF题目搭建"><a href="#CTF题目搭建" class="headerlink" title="CTF题目搭建"></a>CTF题目搭建</h2><p>先安装好了tutum/lamp镜像</p>
+<p>直接使用该镜像开启容器</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="bash"> -d -p 100:80 tutum/lamp</span></span><br></pre></td></tr></table></figure>
+<p>100表示本机端口，若有占用可自行更改</p>
+<p>查看运行的容器，找到容器的ID</p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190904161414.png" alt></p>
+<p>将ctf题目源码复制进容器中</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp HELLO<span class="selector-class">.php</span> <span class="number">0</span>d9b6ee67f88:/app</span><br></pre></td></tr></table></figure>
+<p>进入容器查看，复制成功</p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190904161612.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190904162230.png" alt></p>
+<h2 id="Dockerfile的使用"><a href="#Dockerfile的使用" class="headerlink" title="Dockerfile的使用"></a>Dockerfile的使用</h2><p>我们对一些固定的docker设置如何保存呢？ 如何保存我们的一系列docker操作呢？由此便有了Dockerfile来构建镜像，便于更好保存我们的操作，dockerfile本质上是一个存储多行命令的文件。</p>
+<h3 id="利用Dockerfile构建镜像"><a href="#利用Dockerfile构建镜像" class="headerlink" title="利用Dockerfile构建镜像"></a>利用Dockerfile构建镜像</h3><p>在源码同目录下新建Dockerfile文件</p>
+<p>编写Dockerfile文件</p>
+<p>在该目录开启终端</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t [镜像名] .</span><br></pre></td></tr></table></figure>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p  <span class="string">[host port]</span>:<span class="string">[docker port]</span> <span class="string">[容器名]</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/HAL900000/FigureBed/master/img/20190908162646.png" alt></p>
+<h3 id="编写Dockerfile指令"><a href="#编写Dockerfile指令" class="headerlink" title="编写Dockerfile指令"></a>编写Dockerfile指令</h3><p><strong>FROM</strong> 基于哪个镜像的基础开发</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> tutum/lamp:latest</span><br></pre></td></tr></table></figure>
+<p><strong>RUN</strong> 容器构建时需要运行的命令</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span> <span class="keyword">rm</span> -fr /<span class="keyword">app</span>  \</span><br><span class="line">	&amp;&amp; <span class="keyword">mkdir</span> /<span class="keyword">app</span> \</span><br><span class="line">    &amp;&amp; mv /hello.php /<span class="keyword">app</span>/hello.php</span><br></pre></td></tr></table></figure>
+<p>换行注意加\</p>
+<p><strong>EXPOSE</strong> 用于指定容器将要监听的端口</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EXPOSE <span class="number">80</span> <span class="number">3306</span></span><br></pre></td></tr></table></figure>
+<p><strong>COPY</strong> 将主机的文件复制到镜像内，如果目的位置不存在，Docker会自动创建所有需要的目录结构 (注意：需要复制的目录一定要放在Dockerfile文件的同级目录下)</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">COPY ./<span class="string">[本地文件]</span> /<span class="string">[docker路径]</span></span><br></pre></td></tr></table></figure>
+<p><strong>ADD</strong> 同上类似</p>
+<p><strong>CMD</strong> 用于执行目标镜像中包含的软件和任何参数。CMD 几乎都是以<code>CMD [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;...]</code>的形式使用。因此，如果创建镜像的目的是为了部署某个服务(比如 Apache)，你可能会执行类似于<code>CMD [&quot;apache2&quot;, &quot;-DFOREGROUND&quot;]</code>形式的命令</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">"/run.sh"</span>]</span></span><br></pre></td></tr></table></figure>
+<p><strong>WORKDIR</strong> 指定创建容器后，终端默认登录进来的工作目录，一个落脚点</p>
+<p><strong>ENV</strong> 用来在构建镜像过程中设置环境变量</p>
+<p><strong>#</strong>注释</p>
+
           
-          <!--/noindex-->
         
       
     </div>
